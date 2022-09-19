@@ -1,0 +1,322 @@
+:root {
+    --brand-color1: #2196F3; /*--hover effect --*/
+    --brand-color2: #000000; /*--text color --*/
+    --brand-color3: #F5F5F5; /*--main background--*/
+    --brand-color4: #2F303A; /*--bgc h1 page 1, footer bgc --*/
+    --brand-color5: #F5F4FA; /*--bgc наша команда--*/
+    --brand-color6: #FFFFFF; /*--текст ефект ріш для бізнесу--*/
+    --brand-color7: #212121; /*-- h3 --*/
+    --brand-color8: #757575; /*--p3--*/
+    --brand-color9: #EEEEEE; /*--img bgc page2--*/
+
+}
+
+/*--- якщо гугл не дасть робото, то дасть будь-який із сан-серіф, до яких належить робото --*/
+.body {
+    font-family: Roboto, sans-serif; 
+    color: var(--brand-color2);
+    background-color: var(--brand-color3);
+
+}
+
+.logo-header {
+    font-family: Raleway;
+    font-size: 26px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: var(--brand-color1);
+}
+
+.logo-text {
+    font-family :OleoScript;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.38;
+    color: var(--brand-color2);
+}
+
+/*-----------------Список навігації в хедері
+.navigation{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: var(--brand-color2);
+}
+-----------------------------------------------*/
+.navigation-link,
+.navigation-link-current {
+    color: var(--brand-color2);
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.mail,
+.tel {
+    color: var(--brand-color2);
+}
+.contact{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--brand-color2);
+}
+
+.navigation-link:hover,
+.mail:hover,
+.tel:hover,
+.navigation-link:focus,
+.mail:focus,
+.tel:focus {
+    color: var(--brand-color1);
+text-decoration: underline;
+text-decoration-color: var(--brand-color1);
+}
+/*----------Прибираю підкреслення посилань-меню в хедері-----*/
+.mail,
+.tel,
+.navigation-link,
+.logo-header,
+.logo-text {
+    text-decoration: none;
+}
+
+.main-section {
+    background-color: var(--brand-color4);
+
+}
+
+.main-title {
+    color: var(--brand-color6);
+    font-family: 'Roboto';
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+}
+.buy-button {
+    background-color: var(--brand-color1);
+    color: var(--brand-color6);
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.buy-button:hover,
+.buy-button:focus {
+    text-decoration:underline;
+    text-decoration-color: var(--brand-color1);
+}
+
+.studio-benefits { 
+    background-color: var(--brand-color3);
+
+}
+
+/*-------------------------------прибираю маркування в списках----*/
+.studio-benefits-list,
+.work-list,
+.our-team-list,
+.footer-adress-list {
+    list-style: none;
+}
+
+.navigation,
+.contact {
+    list-style: none;
+}
+
+/*---------------------------приховую заголовок----*/
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.studio-benefits-list-title {
+    color: var(--brand-color7);
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+}
+
+.studio-benefits-list-text {
+color: var(--brand-color8);
+font-family: 'Roboto';
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+}
+
+.work { font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+color :var(--brand-color7);
+}
+
+.team {
+    color: var(--brand-color5);
+}
+.our-team {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--brand-color7);
+}
+
+.our-team-names {
+    font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--brand-color7);
+
+}
+
+.our-team-positions {
+    font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--brand-color8);
+}
+
+.footer {
+    background-color: var(--brand-color4);
+}
+.logo-text-footer {
+    color: var(--brand-color6);
+}
+
+.actual-adress,
+.mail-footer,
+.tel-footer { text-decoration: none;
+
+}
+
+.actual-adress {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--brand-color6);
+
+}
+.mail-footer,
+.tel-footer {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.actual-adress:hover,
+.mail-footer:hover,
+.tel-footer:hover,
+.actual-adress:focus,
+.mail-footer:focus,
+.tel-footer:focus {
+    text-decoration: underline;
+    text-decoration-color: var(--brand-color1);
+}
+
+/*------Portfolio, main, because header and footer are the same copy-pasted in html-------------*/
+
+.visually-hidden-button-list {
+    list-style: none;
+}
+
+.portfolio-navigation-link,
+.portfolio-navigation-example {
+    list-style: none;
+}
+
+.button-portfolio-navigation {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--brand-color7);
+    background-color: var(--brand-color5);
+    border: none;
+}
+
+.button-portfolio-navigation:hover,
+.button-portfolio-navigation:focus {
+    color: var(--brand-color6);
+    background-color: var(--brand-color1);
+}
+
+.portfolio-navigation-example {
+background-color: var(--brand-color9);
+}
+
+.portfolio-navigation-link {
+    text-decoration: none;
+}
+
+.portfolio-navigation-title {
+    background-color: var(--brand-color6);
+    color: var(--brand-color7);
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio-navigation-prtype {
+    background-color: var(--brand-color6);
+        color: var(--brand-color8);
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.03em;
+}
+
+.portfolio-navigation-link-img {
+    background-color: var(--brand-color6);
+}
+
+/*---------------------------------Підсвітка поточної сторінки----*/
+.navigation-link-current {
+    color: var(--brand-color1);
+}
