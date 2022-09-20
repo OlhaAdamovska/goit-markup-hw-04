@@ -13,14 +13,15 @@
 }
 
 /*--- якщо гугл не дасть робото, то дасть будь-який із сан-серіф, до яких належить робото --*/
-.body {
-    font-family: Roboto, sans-serif; 
+
+body {
+    font-family: 'Roboto', Sans-serif;
     color: var(--body-text);
     background-color: var(--main-background);
 }
 
 .logo-header {
-    font-family: Raleway, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 26px;
     line-height: 1.15;
     font-weight: 700;
@@ -100,7 +101,7 @@ text-decoration-color: var(--highlight);
 .buy-button {
     background-color: var(--highlight);
     color: var(--main-background);
-    font-family: 'Roboto';
+    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -110,8 +111,8 @@ text-decoration-color: var(--highlight);
 
 .buy-button:hover,
 .buy-button:focus {
-    text-decoration:underline;
-    text-decoration-color: var(--button-hover-hlt);
+    background-color: var(--button-hover-hlt);
+    cursor: pointer;
 }
 
 .studio-benefits { 
@@ -155,11 +156,11 @@ text-decoration-color: var(--highlight);
 }
 
 .studio-benefits-list-text {
-color: var(--body-par-text);
-/* font-weight: 400; прибираю тя як і нормал, це вказ браузер за замовчуванням*/
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
+    color: var(--body-par-text);
+    /* font-weight: 400; прибираю тя як і нормал, це вказ браузер за замовчуванням*/
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
 .work { 
@@ -171,14 +172,20 @@ letter-spacing: 0.03em;
 color :var(--body-text);
 }
 
+
 .team {
     color: var(--brand-color5);
     background-color: var(--bgc-team);
 }
 
-.team-list-description {
-    background-color: var(--main-background);
+background-color: var(--main-background);
 }
+
+/*
+.our-team-names,
+.our-team-positions {
+    background-color: var(--main-background);
+} */
 
 .our-team {
     font-weight: 700;
@@ -236,15 +243,15 @@ font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: var(--main-background);
-
 }
+
 .mail-footer,
 .tel-footer {
 font-style: normal;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: var (--footer-color);
+color: var(--footer-color);
 }
 
 .actual-adress:hover,
@@ -269,20 +276,21 @@ color: var (--footer-color);
 }
 
 .button-portfolio-navigation {
-    font-family: Roboto, sans-serif;
+    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--body-text);
-    border: none;
+    border: transparent;
 }
 
 .button-portfolio-navigation:hover,
 .button-portfolio-navigation:focus {
     color: var(--main-background);
     background-color: var(--highlight);
+    cursor: pointer;
 }
 /*
 .portfolio-navigation-example {
