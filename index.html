@@ -7,25 +7,41 @@
     <title>WebStudio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
     <link href="./css/styles.css" rel="stylesheet" />
   </head>
-  
+
   <body>
     <header>
-      <nav>
-  <a href="/" class="logo-header">
-    Web<span class="logo-text">Studio</span></a>
-        <ul class="navigation">
-          <li><a href="#" class="navigation-link-current">Студія</a></li>
-          <li><a href="./portfolio.html" class="navigation-link">Портфоліо</a></li>
-          <li><a href="#" class="navigation-link">Контакти</a></li>
+      <div class="header-arrangement">
+        <nav class="div-ul-flex">
+          <div class="logo-flex">
+            <a href="/" class="logo-header">
+              Web<span class="logo-text">Studio</span></a
+            >
+          </div>
+          <ul class="navigation">
+            <li><a href="#" class="navigation-link-current">Студія</a></li>
+            <li>
+              <a href="./portfolio.html" class="navigation-link">Портфоліо</a>
+            </li>
+            <li><a href="#" class="navigation-link">Контакти</a></li>
+          </ul>
+        </nav>
+        <ul class="contact">
+          <li>
+            <a href="mailto:info@devstudio.com" class="mail"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li><a href="tel:+380961111111" class="tel">+38 096 111 11 11</a></li>
         </ul>
-      </nav>
-      <ul class="contact">
-        <li><a href="mailto:info@devstudio.com" class="mail">info@devstudio.com</a></li>
-        <li><a href="tel:+380961111111" class="tel">+38 096 111 11 11</a></li>
-      </ul>
+      </div>
     </header>
     <main>
       <section class="main-section">
@@ -35,27 +51,27 @@
       <section class="studio-benefits">
         <h2 class="visually-hidden">Переваги нашої вебстудії</h2>
         <ul class="studio-benefits-list">
-          <li>
+          <li class="studio-benefits-list-li">
             <h3 class="studio-benefits-list-title">УВАГА ДО ДЕТАЛЕЙ</h3>
             <p class="studio-benefits-list-text">
               Ідейні міркування, і навіть початок повсякденної роботи з
               формування позиції.
             </p>
           </li>
-          <li>
+          <li class="studio-benefits-list-li">
             <h3 class="studio-benefits-list-title">ПУНКТУАЛЬНІСТЬ</h3>
             <p class="studio-benefits-list-text">
               Завдання організації, особливо рамки і місце навчання кадрів тягне
               у себе.
             </p>
           </li>
-          <li>
+          <li class="studio-benefits-list-li">
             <h3 class="studio-benefits-list-title">ПЛАНУВАННЯ</h3>
             <p class="studio-benefits-list-text">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
-          <li>
+          <li class="studio-benefits-list-li">
             <h3 class="studio-benefits-list-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
             <p class="studio-benefits-list-text">
               Значимість цих проблем настільки очевидна, що реалізація планових
@@ -64,7 +80,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section class="our-work">
         <h2 class="work">Чим ми займаємося</h2>
         <ul class="work-list">
           <li>
@@ -91,6 +107,7 @@
         </ul>
       </section>
       <section class="team">
+        <div class="team-section">
         <h2 class="our-team">Наша команда</h2>
         <ul class="our-team-list">
           <li>
@@ -99,8 +116,10 @@
               alt="Фото Ігор Дем'яненко"
               width="270"
             />
+            <div class="photo-footer">
             <h3 class="our-team-names">Product Designer</h3>
             <p class="our-team-positions">Ігор Дем'яненко</p>
+            </div>
           </li>
           <li>
             <img
@@ -108,8 +127,10 @@
               alt="Фото Ольга Рєпіна"
               width="270"
             />
+            <div class="photo-footer">
             <h3 class="our-team-names">Frontend Developer</h3>
             <p class="our-team-positions">Ольга Рєпіна</p>
+            </div>
           </li>
 
           <li>
@@ -118,36 +139,49 @@
               alt="Фото Микола Тарасов"
               width="270"
             />
+            <div class="photo-footer">
             <h3 class="our-team-names">Marketing</h3>
             <p class="our-team-positions">Микола Тарасов</p>
+            </div>
           </li>
-          <li >
+          <li>
             <img
               src="./images/squooshcompressed/img-7б.jpg"
               alt="Фото Михайло Єрмаков"
               width="270"
             />
+            <div class="photo-footer">
             <h3 class="our-team-names">UI Designer</h3>
             <p class="our-team-positions">Михайло Єрмаков</p>
+            </div>
           </li>
         </ul>
       </section>
+    </div>
     </main>
     <footer class="footer">
       <a href="/" class="logo-header">
-        Web<span class="logo-text-footer">Studio</span></a>
+        Web<span class="logo-text-footer">Studio</span></a
+      >
       <address>
         <ul class="footer-adress-list">
           <li>
-            <a class="actual-adress"
+            <a
+              class="actual-adress"
               href="https://goo.gl/maps/NjYtRDWVCfa7fZA99"
               target="_blank"
               rel="nofollow noreferrer noopener"
               >м. Київ, пр-т Лесі Українки, 26</a
             >
           </li>
-          <li><a class="tel-footer" href="tel:+380961111111">+38 096 111 11 11</a></li>
-          <li><a class="mail-footer" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          <li>
+            <a class="tel-footer" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+          <li>
+            <a class="mail-footer" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
         </ul>
       </address>
     </footer>

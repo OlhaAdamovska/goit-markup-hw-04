@@ -107,6 +107,7 @@ text-decoration-color: var(--highlight);
     line-height: 1.88;
     text-align: center;
     letter-spacing: 0.06em;
+    border-radius: 4px;
 }
 
 .buy-button:hover,
@@ -187,13 +188,22 @@ background-color: var(--main-background);
     background-color: var(--main-background);
 } */
 
-.our-team {
+.team {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--body-text);
+
+}
+
+.our-team {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
 .our-team-names {
@@ -203,7 +213,6 @@ background-color: var(--main-background);
         text-align: center;
         letter-spacing: 0.03em;
         color: var(--body-text);
-
 }
 
 .our-team-positions {
@@ -212,6 +221,12 @@ background-color: var(--main-background);
         text-align: center;
         letter-spacing: 0.03em;
         color: var(--body-par-text);
+}
+
+/*!!!!!*/
+
+.our-team-list li {
+    background-color: var(--main-background);
 }
 
 .footer {
@@ -232,9 +247,8 @@ background-color: var(--main-background);
 .tel-footer:hover,
 .actual-adress:focus,
 .mail-footer:focus,
-.tel-footer:focus {
-    text-decoration: underline;
-    text-decoration-color: var(--highlight);
+.tel-footer:focus { 
+    color: var(--highlight);
 }
 
 .actual-adress {
@@ -284,6 +298,9 @@ color: var(--footer-color);
     letter-spacing: 0.03em;
     color: var(--body-text);
     border: transparent;
+
+    border-radius: 4px;
+    padding: 6px 22px;
 }
 
 .button-portfolio-navigation:hover,
@@ -326,4 +343,386 @@ background-color: var(--bgc-portfolio);
 .navigation-link-current {
     color: var(--highlight);
     text-decoration: none; /*щоб не підкреслювало*/
+}
+
+/* сброс стандартных значений браузера*/
+p, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+ul,
+ol {
+    margin:0;
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+/* чтобы везде размер бокса был по бордеру*/
+html {
+    box-sizing: border-box;
+}
+
+/* всем єлементам, всем псевдо-элементам до и всем псевдо-элементам после наследовать бордер-бокс*/
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/*------------------------------Хедер---------*/
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-link,
+.navigation-link-current {
+    margin-right: 50px;
+}
+
+/*---убираем справа лишний марджин 50---*/
+.navigation-link :last-child,
+.navigation-link-current :last-child {
+    margin-right: 0px;
+}
+
+/* для кращої клікабельності посилань*/
+.navigation-link,
+.navigation-link-current,
+.tel,
+.mail {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    border: 2px solid gold;
+}
+
+/* ??? на мейл и тел не действует это и гэп - тк они не контейнеры*/
+.contact {
+    display: flex;
+    gap: 50px;
+    border: 2px solid green;
+    /*отодвигаю вправо 1 способ мой*/
+    flex-grow: 1;
+    justify-content: flex-end;
+   /* 2 способ как Репета 
+   margin-left: auto;*/
+} 
+
+.logo-flex,
+.div-ul-flex {
+    display: flex;
+    border: 2px solid thistle;
+}
+
+.logo-flex {
+    border: 2px solid tomato;
+    align-items: center;
+}
+
+.div-ul-flex {
+    gap: 90px;
+}
+
+.header-arrangement {
+    display: flex;
+    align-items: center;
+    border: 2px solid turquoise;
+    width: 1170px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+/*------------------------------Кінець Хедера ---*/
+
+/* Я в сентябре писала, оставляю чисто для напоминания фций которые могла забыть
+.logo-header,
+.logo-text,
+.navigation-link-current,
+.logo {
+    display: inline-block; 
+}
+
+/* попробую через общий блок
+.logo {
+    width: 145px;
+    height: 31px; 
+    margin-top: 24px;
+    margin-bottom: 24px;
+} */
+
+/*
+.header-container {
+    vertical-align: middle;
+    width: 519px;
+    height: 80px;
+не так margin-left: 200px;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+margin: 0 auto;
+}
+
+.container-headerflex {
+    width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+display: flex;
+align-items: center;
+align-content: center;
+flex-wrap: wrap;
+justify-content: baseline;
+outline: 2px solid tomato;
+}
+
+.contact {
+    display:inline-block;
+    margin-right: 0 auto; 
+    display: inline-block;
+}
+
+
+/*
+.contact {
+    flex-wrap: wrap;
+    display: inline-flex;
+}
+*/
+
+/*всему тегу задали, потом нарисуем цветным где надо, чтобы все кнопки были одинаковые по размеру*/
+button {
+    border: 1px transparent;
+}
+
+
+button {
+    border-radius: px;
+    padding:;
+    display: inline-block; /* делаем блочніми чтобі высота была*/
+    min-width: ; /*для один кнопок и чтобы при переполнении контента растягивалась в срочку*/
+    text-align: center;
+   
+}
+
+.main-section {
+    border: 1px solid powderblue;
+    text-align: center;
+}
+
+/* 
+.main-section h1 { 
+    width: 696px;
+    height: 120px;
+    padding: 14px 48px;
+} 
+
+.main-section buy-button {
+
+}
+
+*/
+
+/* ---------------------------------ПОРТФОЛІО---------- */
+
+.portfolio-main {
+    width:1170px;
+
+   /* это не паддинги!!!!!!!!!!!!!!!
+   padding-left: 15px;
+    padding-right: 15px;*/
+
+    /*центрування на сторінці*/
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.portfolio-navigation-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/*display:flex;
+flex-wrap: wrap;
+gap: 30px;*/
+
+.portfolio-navigation-link {
+    display: flex;
+}
+
+.portfolio-navigation-example {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid goldenrod;
+    width: 370px;
+}
+
+.description {
+    align-items: center;
+    margin: 20px;
+}
+
+.description > h2 {
+    margin-bottom: 0px;
+}
+
+.description > p {
+    margin-top: 0px;
+}
+
+.portfolio-navigation-link > img {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+} 
+
+.visually-hidden-button-list {
+    display: flex;
+    width: 575px;
+    height: 54px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    /*align-items: ;*/
+    margin-top: 94px;
+    margin-bottom: 34px;
+    border: 2px solid tomato;
+}
+
+/*-----------------------------------------Футер----------------------*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1600px;
+    height: 252px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 215px;
+
+}
+
+.footer-adress-list {
+    margin-top: 20px;
+}
+/*---------------------------------------Кінець футера----*/
+
+/*---------------------------------------Головна сторінка----*/
+
+.main-section {
+    width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+.main-title {
+    width: 696px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 452px;
+    margin-bottom: 30px;
+    border: 2px solid yellow;
+}
+
+/*------------------------Переваги-----*/
+.studio-benefits {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 94px;
+    margin-bottom: 94px;
+}
+
+.studio-benefits-list {
+    display: flex;
+}
+
+.studio-benefits-list-li {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.studio-benefits-list-li h3 {
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+.studio-benefits-list-li p {
+    border: 2px solid tomato;
+}
+
+/* -------------- Чим ми займаємося----*/
+
+.our-work {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 94px;
+}
+
+.work-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/*------------------Наша команда---*/
+
+.team {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-section {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.our-team-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-team {
+    margin-bottom: 50px;
+}
+
+.our-team-names {
+    text-align: center;
+}
+
+.photo-footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.our-team-names {
+    margin-bottom: 10px;
 }
