@@ -152,8 +152,9 @@ text-decoration-color: var(--highlight);
     color: var(--body-text);
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.14;
+    /*line-height: 1.14;*/
     letter-spacing: 0.03em;
+    margin-top: 30px;
 }
 
 .studio-benefits-list-text {
@@ -162,6 +163,7 @@ text-decoration-color: var(--highlight);
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    width: 270px;
 }
 
 .work { 
@@ -394,9 +396,8 @@ html {
     margin-right: 50px;
 }
 
-/*---убираем справа лишний марджин 50---*/
-.navigation-link :last-child,
-.navigation-link-current :last-child {
+/*---убираем справа лишний марджин 50  navigation-link-current ничего не делаю---*/
+.navigation-link-contacts {
     margin-right: 0px;
 }
 
@@ -416,13 +417,14 @@ html {
 /* ??? на мейл и тел не действует это и гэп - тк они не контейнеры*/
 .contact {
     display: flex;
-    gap: 50px;
+    gap: 0px;
     border: 2px solid green;
-    /*отодвигаю вправо 1 способ мой*/
+    align-items: flex-start;
+    /*отодвигаю вправо 1 способ мой уже не пашет добавились иконки
     flex-grow: 1;
-    justify-content: flex-end;
-   /* 2 способ как Репета 
-   margin-left: auto;*/
+    justify-content: flex-end;*/
+   /* 2 способ как Репета */
+   margin-left: auto;
 } 
 
 .logo-flex,
@@ -434,11 +436,9 @@ html {
 .logo-flex {
     border: 2px solid tomato;
     align-items: center;
+    margin-right: 93px;
 }
 
-.div-ul-flex {
-    gap: 90px;
-}
 
 .header-arrangement {
     display: flex;
@@ -571,7 +571,7 @@ gap: 30px;*/
 .portfolio-navigation-example {
     display: flex;
     flex-direction: column;
-    border: 2px solid goldenrod;
+    border: 1px solid #EEEEEE;
     width: 370px;
 }
 
@@ -611,18 +611,19 @@ gap: 30px;*/
 
 .footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /*flex-direction: column;
+    justify-content: center;*/
     width: 1600px;
     height: 252px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 215px;
-
+    border: 4px solid rgb(30, 210, 42);
 }
 
 .footer-adress-list {
     margin-top: 20px;
+    border: 1px solid white;
 }
 /*---------------------------------------Кінець футера----*/
 
@@ -655,17 +656,23 @@ gap: 30px;*/
 }
 
 .studio-benefits-list {
-    display: flex;
+   display: flex;
 }
 
 .studio-benefits-list-li {
     display: flex;
     flex-direction: column;
+    margin-right: 30px;
+}
+
+/*-------------------- А тут почему не могу убрать марджин-райт?--Могу! Работает---*/
+
+.studio-benefits-list-li:last-child {
+        margin-right: 0px;
 }
 
 
-
-.studio-benefits-list-li h3 {
+.studio-benefits-list-li > h3 {
     margin-bottom: 10px;
     border: 2px solid black;
 }
@@ -726,3 +733,396 @@ gap: 30px;*/
 .our-team-names {
     margin-bottom: 10px;
 }
+
+/* 4 модуль */
+
+/* не створюю окремий дів, через існуючи клас*/
+/*???????????????????які кольори градієнту як зрозуміти з фігми??????????????*/
+.main-section {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, 
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url("../images/squooshmod4/shapka.jpg");
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} 
+    
+/*------------------- Постійні тіні для наша команда----*/
+.our-team-list > li {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+}
+
+/*---У картках сторінки Портфоліо є ефект тіні при ховері в будь-якому місці картки*/
+
+
+.portfolio-navigation-example:hover,
+.portfolio-navigation-example:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+0px 4px 4px rgba(0, 0, 0, 0.06),
+1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* У фільтрі (список кнопок) Портфоліо ефект тіні при ховері або фокусі на кнопки*/
+
+.button-portfolio-navigation:hover,
+.button-portfolio-navigation: {
+box-shadow: inset 0px 3px 1px rgba(0, 0, 0, 0.1),
+ 0px 1px 2px rgba(0, 0, 0, 0.08),
+ 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+
+/*--------------------------Роблю іконки------------- */
+/*--------------------------Переробляю все через sprite
+.mail::before {
+content:"";
+display: inline-block;
+width: 36px;*/ /*ширина іконки 16+по 10 зліва і справа*/
+/*  height: 12px;
+background-image:url("../images/svg_icons/envelope.svg");
+background-position: bottom;
+background-repeat: no-repeat;
+}  */
+
+/*--------------------------Переробляю все через sprite
+.tel::before {
+content: "";
+display: inline-block;
+width: 30px; */
+/*ширина іконки 10+по 10 зліва і справа*/
+/*  height: 16px;  
+background-image: url("../images/svg_icons/tel.svg");
+background-position: bottom;
+background-repeat: no-repeat;
+}
+*/
+
+/*------------- Flex for contacts in header : envelope, mail etc---- */
+
+.contact-flex {
+    display: flex;
+}
+
+/*------------------Колір іконок в хедері----*/
+
+.contact-header {
+    fill: #757575;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+/*-------------------------Прибираю лівий марджин у конверта-------*/
+.contact-flex:first-child .contact-header {
+    margin-left: 0px;
+}
+
+/* 2 способ убрать левый марджин у конверта (крайняя геометрия чистим)
+.envelope {
+    margin-left: 0;
+}
+*/
+
+.contact-flex {
+    display: flex;
+    align-items: center;
+}
+
+.envelope {
+    width: 16px;
+    height: 12px;
+    padding: 0px;
+}
+.telephone {
+    width: 10px;
+    height: 32px;
+}
+
+.contact-header:hover,
+.contact-header:focus {
+    fill: var(--highlight);
+}
+
+/*-Не вийшло чрез нний чайлд чому???? .studio-benefits-list:nth-child(1)::before---*/ 
+.anten::before {
+    content: "";
+    display: block;
+    border: 1px solid #188CE8;
+    width: 270px;
+    height: 120px;
+    background-image: url("../images/svg_icons/anten.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65.32px 70px; 
+    background-color: var(--bgc-team);
+}
+
+.clock::before {
+    content: "";
+    display: block;
+    border: 1px solid #188CE8;
+    width: 270px;
+    height: 120px;
+    background-image: url("../images/svg_icons/clock.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 66.96px 70px;
+    background-color: var(--bgc-team);
+}
+
+.diagram::before {
+    content: "";
+    display: block;
+    border: 1px solid #188CE8;
+    width: 270px;
+    height: 120px;
+    background-image: url("../images/svg_icons/diagram.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70px 53.69px;
+    background-color: var(--bgc-team);
+}
+
+.astronaut::before {
+    content: "";
+    display: block;
+    border: 1px solid #188CE8;
+    width: 270px;
+    height: 120px;
+    background-image: url("../images/svg_icons/astronaut.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    background-color: var(--bgc-team);
+}
+
+/*---Переделываю через спрайт
+.social-links::after {
+    content: "";
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: 1px solid #188CE8;
+    width: 206px;
+    height: 44px;
+    background-image: url("../images/svg_icons/instagram.svg");
+    background-image: url("../images/svg_icons/twitter.svg");
+    background-image: url("../images/svg_icons/facebook.svg");
+    background-image: url("../images/svg_icons/linkedin.svg");
+    /*background-position: center;
+    background-repeat: no-repeat;*/
+    background-size: 44px;    
+}
+---------------------------*/
+
+/*------------------Основні (постійні) клієнти----*/
+
+.main-clients-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    border: 1px solid rgb(68, 16, 188);
+    margin-bottom: 94px;
+}
+
+.main-clients-container {
+    width: 1170px;
+    height: 184px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 94px;
+    margin-bottom: 94px;
+}
+
+.main-clients {
+    width: 1600px;
+    height: 372px;
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-clients-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+   /* margin-bottom: 94px; в 4 домашке надо менять єто*/
+}
+
+
+
+/*--------------------------------???---*/
+
+
+.join-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-list-item {
+    border: 1px solid #AFB1B8;
+}
+
+.first-column {
+    margin-top: 60px;
+}
+
+.join {
+    margin-top: 72px;
+    margin-left: 70px;
+}
+
+.join-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-background);
+    }
+
+.social-links-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+}
+
+/*----высоту и ширину еще задала в html, тк можно и там и тут---*/
+.social-links-footer-img {
+        width: 20px;
+        height: 20px;
+        fill: #AFB1B8;
+}
+
+/*.social-links-footer-img:hover,
+.social-links-footer-img:focus {
+    fill: #FFFFFF;
+}*/
+
+.social-links-footer-lis a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+}
+
+
+/* ---------Це не працювало взагалі-------------*/
+.social-links-footer-lis a:hover,
+.social-links-footer-lis a:focus {
+    width: 44px;
+    height: 44px;
+    /* fill: #FFFFFF;*/
+    background-color: var(--highlight);
+    border-radius: 90%;
+}
+/*---------------------------------------------*/
+
+/*----------------------------------------------Наведення на іконки соц мереж---*/
+
+.social-links-footer-lis a:hover .social-links-footer-img, /* або svg */
+.social-links-footer-lis a:focus .social-links-footer-img {
+    fill: #FFFFFF;
+}
+
+
+/* через класс
+.social-links-footer-lis-link:hover,
+.social-links-footer-lis-link:focus {
+    fill: #FFFFFF;
+    background-color: var(--highlight);
+}
+--------------------------------------------*/
+
+/*---------------------------------------------Постійні клієнти----*/
+
+/*
+.main-clients-list-item:nth-child(1) {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    background-image: url("../images/squooshcompressed/img-1а.jpg");
+    background-position: center;
+}
+*/
+
+.main-clients-list-item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-clients-list {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 94px;
+}
+
+.main-clients-list-item-brand {
+    fill: #afb1b8;
+}
+
+/*--------------------------------Ховер і фокус----*/
+
+.main-clients-list-item:hover,
+.main-clients-list-item:focus {
+    border: 1px solid #2196f3;
+}
+
+.main-clients-list-item:hover .main-clients-list-item-brand,
+.main-clients-list-item:focus .main-clients-list-item-brand {
+    fill: #2196f3;
+}
+
+.actual-adress,
+.tel-footer {
+    margin-bottom: 9px;
+}
+/*------------------------------Приєднуйтесь-----------*/
+
+.social-links-footer-img-join {
+    fill: #FFFFFF;
+    
+}
+
+/*--------------------------------Анти-прозорість фону 10%-----*/
+
+.social-links-footer-lis-join {
+    width: 40px;
+    height: 40px;
+    border-radius: 90%;
+    background-color: #ffffff10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.social-links-footer-lis-join:hover,
+.social-links-footer-lis-join:focus {
+    background-color: #2196F3;
+}
+
+.social-links-footer-img-join {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+   
+}
+
